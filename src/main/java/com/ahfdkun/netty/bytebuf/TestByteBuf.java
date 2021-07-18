@@ -1,6 +1,7 @@
 package com.ahfdkun.netty.bytebuf;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.CompositeByteBuf;
 import io.netty.buffer.Unpooled;
 
@@ -45,6 +46,8 @@ public class TestByteBuf {
                 handleArray(array3, 0, array3.length);
             }
         }
+
+        System.out.println("hexDump: " + ByteBufUtil.hexDump(Unpooled.copiedBuffer("hello".getBytes())));
 
     }
 
